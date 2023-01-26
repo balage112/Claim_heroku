@@ -1,1 +1,1 @@
-web:gunicorn claim_project.wsgi:application --log-file -
+web: gunicorn claim_project.wsgi:application --log-file -
