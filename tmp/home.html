@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title of current page</title> <!--bude se dynamicky měnit -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/">Co znamená prodej pohledávky.</a></li>
+        <li><a href="/">Jak to funguje?</a></li>
+        <li><a href="/">Aktuálně v nabídce.</a></li>
+        <li><a href="/">O nás.</a> </li>
+        <li class="last-item"><a href="">Přihlášení</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="welcome">
+        <h1>IMMO dnes BANKA zítra</h1>
+    </div>
+
+
+
+
+</main>
+
+</body>
+</html>
+ <link rel="stylesheet" href="{% static 'claim/login.css' %}">
+
+
+
+
+
+
+
+
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!--
+    <h2>Přihlášení</h2>
+    <div class="box">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Přihlásit se</button>
+        </form>
+    </div>
+    <div class="box">
+        Můžete se  <a href= "/accounts/signup/ " >  registrovat </a> zdarma zde.
+    </div>
+
+-->
+
+  <body id="body" class="text-center">
+    <form class="form-signin">
+      <form method="POST">
+        {% csrf_token %}
+        {{ login_form}}
+
+            <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+</div>
+        <img class="mb-4" src="{% static 'claim/logo.png' %}" alt="" width="132" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Prosím, přihlaste se</h1>
+        <label for="username" class="sr-only">Username</label>
+        <input type="username" name="username" id="username" class="form-control" placeholder="Uživatelské jméno" required autofocus>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password"  name="password" id="password" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+      </form>
+    </form>
+  </body>
+
+
+{% endblock %}

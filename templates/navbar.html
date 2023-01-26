@@ -1,0 +1,54 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg  navbar-dark py-0 fixed-top nav-top ">
+    <div class="container">
+        <a href="/" class="navbar-brand nav-text">
+            <span style="color:#01A0E2">I</span>
+            <span style="color:#01A0E2">M</span>
+            <span style="color:#01A0E2">M</span>
+            <span style="color:#01A0E2">O</span>
+
+            <span style="color:#DAEDF7">d</span>
+            <span style="color:#DAEDF7">n</span>
+            <span style="color:#DAEDF7">e</span>
+            <span style="color:#DAEDF7">s</span>
+
+            - Banka zítra</a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Domů</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'claim' %}" class="nav-link">Aktuálně v nabídce</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/#about-us" class="nav-link">Kdo jsme</a>
+
+                </li>
+                {% if not request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'login_req' %}" class="nav-link">Přihlášení</a>
+                {% endif %}
+                </li>
+                {% if not request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'signup' %}" class="nav-link">Registrace</a>
+                {% endif %}
+                </li>
+
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link">Odhlásit {{ user }}</a>
+                {% endif %}
+
+            </ul>
+         </div>
+    </div>
+</nav>

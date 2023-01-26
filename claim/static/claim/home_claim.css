@@ -1,0 +1,40 @@
+/* SASS funguje, ale importy jsou červené a nevím proč */
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
+
+
+.first-cont {
+    background-color: #01A0E2;
+}
+
+.cards-one {
+    background-color: #DAEDF7;
+}
+
+.text-intro-immo {
+    font-weight: bold;
+}
+
+#about-us {
+    background-color: #01A0E2;
+}
+
+.who-we-are {
+    background-color: #01A0E2;
+}
+
+.contact {
+    background-color: #DAEDF7;
+}
+
+.background-accordion {
+    background-color: #01A0E2;
+}

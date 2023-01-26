@@ -1,0 +1,288 @@
+{% extends 'main.html' %}
+
+{% block title %} IMMO Business a.s. {% endblock %}
+
+{% block content %}
+
+<section class=" text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start first-cont">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1> Nebuďte MIMO <span class="text-warning">
+                        investujte s IMMO
+                    </span></h1>
+                <div class="lead py-2 text-intro-immo">
+                    <p>     Již spolu skládáme Vaše <a href="https://www.immobusiness.cz" target="_blank">finance</a>
+                            Pojďme společně vytěžit maximum díky alternativním investičním příležitostem.
+                    </p>
+
+                </div>
+                <button class="btn btn-primary bnt-lg" data-bs-toggle="modal" data-bs-target="/#claim">Chci zhodnotit
+                    své peníze
+                </button>
+            </div>
+            <img class="img-fluid w-50 d-none d-sm-block" src="static/claim/showcase.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="cards cards-one">
+    <div class="container py-1">
+        <div class="row">
+            <div class="col-4">
+                <div class="card img">
+                    <img src="static/claim/card_building.svg">
+                    <div class="card title text-center"><h2> Nemovitosti nás baví </h2></div>
+                    <div class="body-text card-one">
+                    <p>Již od roku 2018 poskytujeme našim investorům atraktivní výnos na směnkách, které
+                        jsou zajištěné nemovitostmi. Jedná se o nemovitosti, které jsou předmětem našeho financování.
+                        Dobře víme, že pouze kvalitní nemovitost nestačí - dbáme na to, abychom financovali pouze
+                        klienty, které v průběhu úvěrování dobře poznáme a můžeme se na ně spolehnout stejně dobře,
+                        jako oni na nás. A nyní se na nás můžete spolehnout i Vy.
+                    </p>
+                    </div>
+                    <button class="btn btn-primary">Click me!</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card img">
+                    <img src="static/claim/card_stand_out.svg">
+                    <div class="card title text-center"><h2>Máme zkušenosti</h2></div>
+                    <div class="body-text card-one">
+                        <p>
+                        Již od roku 2018 poskytujeme našim investorům atraktivní výnos na směnkách, které
+                        jsou zajištěné nemovitostmi. Jedná se o nemovitosti, které jsou předmětem našeho financování.
+                        Dobře víme, že pouze kvalitní nemovitost nestačí - dbáme na to, abychom financovali pouze
+                        klienty, které v průběhu úvěrování dobře poznáme a můžeme se na ně spolehnout stejně dobře,
+                        jako oni na nás. A nyní se na nás můžete spolehnout i Vy.
+                        </p>
+                    </div>
+                    <button class="btn btn-primary">Click me!</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card img">
+                    <img src="static/claim/card_grow_with_us.svg">
+                    <div class="card title text-center"><h2>Podívejte se sami</h2></div>
+                    <div class="body-text card-one">
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laborum repudiandae sapiente velit dolorum excepturi doloremque animi,
+                            ffasfasfsafsfamet eum aspernatur autem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laborum repudiandae sapiente velit dolorum excepturi doloremque animi,
+                            ffasfasfsafsfamet eum aspernatur autem.
+                        </p>
+                    </div>
+                    <a class="btn btn-primary" href="{% url 'claim' %}" role="button">Aktuálně v nabídce</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about-main bg dark" >
+    <div class="container-fluid  text-warning py-3" id="about-us">
+        <div class="d-sm-flex align-items-center justify-content-center">
+            <h1>Kdo jsme</h1>
+
+        </div>
+    </div>
+</section>
+
+<section class="who-we-are ">
+    <div class="container py-5  text-dark who-we-are">
+        <p class="text">
+            Společnost IMMO Business a.s. je finanční společností, která se zabývá poskytováním podnikatelských a
+            korporátních úvěrů <strong>zajištěných nemovitostí.</strong>  Společnost byla založena v roce 2018, přičemž jen za první 4
+            roky svého působení poskytla úvěry v objemu téměř 300 milionů Kč. Jenom za <strong>rok 2021</strong>  poskytla společnost nové
+            úvěry v objemu přibližně za <strong>150 mil. Kč.</strong>
+        </p>
+    </div>
+</section>
+
+<section class="cards  who-we-are">
+    <div class="container  py-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card boss">
+                    <img src="static/claim/boss_jz.png">
+                    <div class="card-body">
+                        <h5 class="card-title"> Ing. Jaroslav Žahourek - předseda představenstva</h5>
+                        <p class="card-text">Jaroslav Žahourek vystudoval ČVUT, 15 let pracoval v bankovnictví
+                        (UniCredit) jako vedoucí v oblasti Treasury a Retail. Je aktivním partnerem ve firemních
+                        restrukturalizacích se skupinou M. L. Moran.
+                        Od roku 2012 se pohybuje v oblasti poskytování nebankovních hypoték. Zároveň je v přímém kontaktu
+                        s již stávajícími investory v programu IMMO Business směnky.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card boss">
+                    <img src="static/claim/boss_ks.png" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"> Mgr. Karel Suchý - člen představensta</h5>
+                        <p class="card-text">Karel Suchý vystudoval Právnickou fakultu University Karlovy v Praze.
+                        Již 18 let se pohybuje v bankovnictví - zejména v České spořitelně a.s. a Hello Bank. Nenahraditelnou
+                        součástí společnosti IMMO Business a.s. se stal roku 2018, kde se aktivně podílel a stále podílí na optimalizaci jak
+                        úvěrových tak také vymáhacích procesů společnosti. Od roku 2021 také plní funkci člena představenstva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact  text-center py-5">
+    <div class="container">
+        <h2 class="contacts text-warning">Kontakty</h2>
+    </div>
+</section>
+
+
+<div class="row w-120 contact" >
+      <div class="col-lg-6 my-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1279.6548313379744!2d14.463791370209359!3d50.099210598940324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9356298f69a1%3A0x131ae4bba6c75d55!2sBudova%20R2%2C%20Rohansk%C3%A9%20n%C3%A1b%C5%99.%20693%2C%20186%2000%20Praha%208-10!5e0!3m2!1sen!2scz!4v1664476451288!5m2!1sen!2scz"
+          class="w-100" height="400" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+  <div class="col-lg-6 my-4 d-flex align-items-center">
+  <div>
+   <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Adresa <i class="bi bi-geo-alt"></i></h3>
+                <p>IMMO Business a.s.</p>
+                <p>Rohanské nábřeží 693/10</p>
+                <p>Rustonka, budova R2</p>
+                <p>186 00 Praha 8</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Kontakt <i class="bi bi-telephone"></i></h3>
+                <p>+420 222 200 696</p>
+                <p>+420 774 232 377</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Email <i class="bi bi-envelope"> </i></h3>
+                <p><a href="mailto:immobusiness@immobusiness.cz">
+                    immobusiness@immobusiness.cz</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+ <section class="background-accordion">
+        <div class="container ">
+            <h2 class="text-center mb-4 py-2 text-warning"> Často se ptáte </h2>
+
+            <div class=" accordion accordion-flush ">
+                <div class="accordion-item ">
+                    <h2 class="accordion-header who-we-are">
+                        <button
+                            class="accordion-button collapsed who-we-are"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#one"
+                        >
+                            Collapsible Group Item #1
+                        </button>
+                    </h2>
+                    <div
+                        id="one"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#one"
+                    >
+                        <div class="accordion-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                            brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                            et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                            heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#two"
+                        >
+                            Collapsible Group Item #2
+                        </button>
+                    </h2>
+                    <div
+                        id="two"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#one"
+                    >
+                        <div class="accordion-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                            brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                            et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                            heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </section>
+
+<!-- Floating form -->
+
+<div class="floating-contact-form">
+      <div class="form-container">
+        <h3>Ozvěte se nám!</h3>
+
+        <form method="POST" action="claim/">
+            {% csrf_token %}
+          <div class="field-container">
+            <i class="fas fa-signature"></i>
+            <label for="name">Jméno</label>
+            <input class="form-input" type="text" name="name" id="name" />
+          </div>
+
+          <div class="field-container">
+            <i class="fas fa-envelope"></i>
+            <label for="email">Email</label>
+            <input class="form-input" type="text" name="email" id="email" />
+          </div>
+
+          <div class="field-container">
+            <i class="far fa-sticky-note"></i>
+            <label for="message" >Zpráva</label>
+            <textarea
+              name="message"
+              class="form-input"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <input type="submit" name="submit" id="submit"  value="Send" />
+        </form>
+      </div>
+
+      <div class="contact-icon">
+        <i class="fas fa-comments"></i>
+      </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+#img {
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+
+
+#embed {
+    width: 50rem;
+    height: 20rem;
+    border: solid 3px;
+}
+
+/*
+.container-form {
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
+    left: 68rem;
+    bottom: 25rem;
+}
+
+*/
+
+
+

@@ -1,0 +1,165 @@
+{% extends 'main.html' %}
+
+{% block title %} IMMO Business a.s. {% endblock %}
+
+{% block content %}
+
+<!--
+    <div class="actual-offer">
+        <hr class="hr hr-primary divider-lg">
+        <h1>Aktuálně v nabídce</h1>
+    </div>
+-->
+
+<section class=" claims py-3 ">
+	<div class="container-fluid bg-dark">
+		<div class="titles py-5">
+			{% for c in claim %}
+			{% if not field.is_readonly %}
+            <h2 class=" descr text-warning py-5">{{ c.description | linebreaksbr }}</h2>
+
+		</div>
+
+		<div class="pdf">
+			{% if c.pdf %}}
+			<embed id="embed"src="../media/{{ c.pdf }}">
+
+		</div>
+			{% endif %}
+
+		<div class="tranches text-white">
+			<h4> Celková výše tranše: {{ c.price_tranche }}</h4><br>
+			<h4> Minimální výše investice: {{ c.min_price_tranche }}</h4><br>
+			<hr>
+
+
+             {% endif %}
+			 {% endfor %}
+		</div>
+
+	</div>
+
+
+
+
+</section>
+
+
+
+
+<!--
+    <section class="bg-white text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container"></div>
+            {% for c in claim %}
+        <p> {{ c.title }} </p>
+            <p> {{ c.description }} </p>
+            <p> Celková výše tranše {{ c.price_tranche }}  </p>
+            <p> Minimální výše investice {{ c.min_price_tranche}}</p>
+            {% endfor %}
+
+
+
+
+
+<div class="container-about">
+    {% for c in claim %}
+    <h1> {{ c.title }} </h1>
+    <p> {{ c.description }} </p>
+    <p> Celková výše tranše {{ c.price_tranche }}  </p>
+    <p> Minimální výše investice {{ c.min_price_tranche}}</p>
+</div>
+    <div class="img">
+    {% if c.image  %}}
+        <img id="img" src="../media/{{ c.image }}">
+
+    </div>
+    {% endif %}
+
+    {% if c.pdf %}
+        <div class="pdf">
+            <embed id="embed"src="../media/{{ c.pdf }}">
+        </div>
+    {% endif %}
+    {% endfor %}
+
+-->
+
+<section id="contact">
+	<div class="sectionheader">	<h1> Kontaktujte nás </h1></div>
+	<article>
+	<p>Vaše zprávy a údaje jsou u nás v bezpečí. Klikněte na obálku a neváhejte nám napsat!</p>
+
+			<label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox">
+
+			<form action="" method="post" class="contactform">
+                    {% csrf_token %}
+				<p class="input_wrapper"><input type="text" name="name" value=""  id ="name"><label for="name">Jméno</label></p>
+				<p class="input_wrapper"><input type="text" name="email" value=""  id ="email"><label for="email">Email</label></p>
+				<p class="input_wrapper"><input type="text" name="phone" value=""  id ="phone"><label for="subject">Telefon</label></p>
+					<select class="custom-select form-select">
+					<option selected> Vyberte ze seznamu </option>
+					<option value="1"> Nemám vybranou konkrétní pohledávku </option>
+						{% for c in claim %}
+					<option value="2"> {{ c.title }} </option>
+						{% endfor %}
+            </select>
+				<p class="textarea_wrapper"><textarea name="subject" id="subject"></textarea></p>
+				<p class="submit_wrapper"><input type="submit" value="ODESLAT"></p>
+			</form>
+	</article>
+</section>
+
+
+{% endblock %}
+
+<!--
+
+<div class="container-form form-all">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="container text-center">
+            <h1>Kontaktujte nás</h1>
+        </div>
+        <div class="container form-group">
+            <div class="form-group form-name">
+                <label> Jméno </label>
+                <input type="name" name="name" class="form-control" id="name" placeholder=" Vaše jméno ">
+            </div>
+
+            <div class="form-group form-surname">
+                <label> Příjmení </label>
+                <input type="surname", name="surname" class="form-control" id="surname" placeholder=" Vaše příjmení ">
+            </div>
+
+            <div class="form-group form-email">
+                <label> Email </label>
+                <input type="email", name="email" class="form-control" id="email" placeholder=" Zadejte e-mail ">
+            </div>
+
+            <div class="form-group form-phone">
+                <label> Telefon </label>
+                <input type="phone" name="phone" class="form-control" id="phone" placeholder=" Zadejte telefon ">
+            </div>
+
+            <select class="custom-select form-select">
+                <option selected> Vyberte ze seznamu </option>
+                <option value="1"> Nemám vybranou konkrétní pohledávku </option>
+                    {% for c in claim %}
+                <option value="2"> {{ c.title }} </option>
+                    {% endfor %}
+            </select>
+
+            <div class="form-group form-message">
+                <label> Zanechte nám zprávu </label>
+                <textarea class="form-control form-text-area" name="subject" id="subject"></textarea>
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-primary mb-2 "> Odeslat </button>
+        </div>
+    </form>
+</div>
+
+-->
