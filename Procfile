@@ -1,1 +1,0 @@
-web:gunicorn claim_project.wsgi:application --log-file -
